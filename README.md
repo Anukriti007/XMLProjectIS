@@ -1,5 +1,6 @@
-**MOVIE RECOMMENDATIONS**
-   
+**MOVIE RECOMMENDATION**
+
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/90084383/140229869-7ca45c4f-bcdb-4a42-b3d1-1f158f25d1ab.png)
 ________________________________________
 **Introduction**
 Discover all the movie recommendations you need for your mood. Find movies by genres, ratings and cast. BingWatch.com provides you with list of movie recommendations as per your needs.
@@ -16,9 +17,9 @@ ________________________________________
 
 **Data Feeds**
 
-Dataset of Movies with their details and ratings: 
+Dataset of Movies with their details and ratings: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=movies_metadata.csv
 
-Dataset of Movies with their cast & crew: 
+Dataset of Movies with their cast & crew: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=ratings.csv
 
 
 ________________________________________
