@@ -36,7 +36,9 @@ Search a movie by popularity, genre, cast and crew.
 
 **Example 1.1**
 Given: Data of Movie recommendations is available
+
 When Search for "Comedy"
+
 Then Should receive at least one result with these attributes
 1.	Movie Title
 2.	Release Date
@@ -49,7 +51,9 @@ Then Should receive at least one result with these attributes
 
 **Example 1.2**
 Given: Data of Movie recommendations is available
+
 When Search for "Jim Carrey"
+
 Then Should receive at least one result with these attributes
 1.	Movie Title
 2.	Release Date
