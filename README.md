@@ -17,9 +17,9 @@ ________________________________________
 
 **Data Feeds**
 
-Dataset of Movies with their details and ratings: https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(1).json
+Dataset of Movies with their details and ratings: https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(2).json
 
-Dataset of Movies with their cast & crew: 
+Dataset of Movies with their cast & crew:  https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(1).json
 
 
 ________________________________________
