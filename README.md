@@ -17,9 +17,9 @@ ________________________________________
 
 **Data Feeds**
 
-Dataset of Movies with their details and ratings: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=movies_metadata.csv
+Dataset of Movies with their details and ratings: https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(1).json
 
-Dataset of Movies with their cast & crew: https://www.kaggle.com/rounakbanik/the-movies-dataset?select=ratings.csv
+Dataset of Movies with their cast & crew: 
 
 
 ________________________________________
