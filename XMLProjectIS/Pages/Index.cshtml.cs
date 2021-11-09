@@ -24,7 +24,8 @@ namespace XMLProjectIS.Pages
             using (var webClient = new WebClient())
             {
                 string jsonString = webClient.DownloadString("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json");
-                
+                var welcome = Welcome.FromJson(jsonString);
+                ViewData["Welcome"] = welcome;
             }
         }
     }
