@@ -23,7 +23,11 @@ namespace QuickType
         [JsonProperty("year")]
         public long Year { get; set; }
 
-      
+        [JsonProperty("cast")]
+        public string[] Cast { get; set; }
+
+        [JsonProperty("genres")]
+        public Genre[] Genres { get; set; }
     }
 
     public enum Genre { Action, Adventure, Animated, Biography, Comedy, Crime, Dance, Disaster, Documentary, Drama, Erotic, Family, Fantasy, FoundFootage, Historical, Horror, Independent, Legal, LiveAction, MartialArts, Musical, Mystery, Noir, Performance, Political, Romance, Satire, ScienceFiction, Short, Silent, Slasher, Sport, Sports, Spy, Superhero, Supernatural, Suspense, Teen, Thriller, War, Western };
