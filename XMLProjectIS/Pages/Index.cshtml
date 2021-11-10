@@ -21,6 +21,13 @@
         </tr>
     </thead>
     <tbody>
-       
+        @foreach (QuickType.Welcome welcome in welcomes)
+        {
+            <tr>
+                <td>@welcome.Title</td>
+                <td>@welcome.Year</td>
+            </tr>
+        }
+
     </tbody>
 </table>
