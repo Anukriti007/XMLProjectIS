@@ -2,9 +2,25 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
 }
 
+
+
 <div class="text-center">
-    <h1 class="display-4">Welcome to My XML Project IS</h1>
-    <p>Trying again</p>
+    <h1 class="display-4">Movies</h1>
 </div>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+    </tbody>
+</table>
