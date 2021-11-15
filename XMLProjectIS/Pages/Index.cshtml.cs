@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using QuickType;
+using Movies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +24,21 @@ namespace XMLProjectIS.Pages
             using (var webClient = new WebClient())
             {
                 string jsonString = webClient.DownloadString("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json");
-                var welcome = Welcome.FromJson(jsonString);
-                ViewData["Welcome"] = welcome;
+                string result = "";
+
+                try
+                {
+                    result = webClient.DownloadString(jsonString);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling API", e);
+
+
+
+                }
+                var movieList = Movies.MovieCollection.FromJson(jsonString);
+                ViewData["Movie_List"] = movieList;
             }
         }
     }
