@@ -2,9 +2,56 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
+    var welcomes1 = (QuickType1.Welcome1[])ViewData["Welcome1"];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to My XML Project IS</h1>
-    <p>Trying again</p>
+    <h1 class="display-4">Movies</h1>
 </div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Adult</th>
+            <th>Budget</th>
+            <th>Title</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (QuickType.Welcome welcome in welcomes)
+        {
+            <tr>
+                <td>@welcome.Adult</td>
+                <td>@welcome.Budget</td>
+                <td>@welcome.Title</td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <th>Cast</th>
+            <th>Crew</th>
+            <th>Id</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (QuickType1.Welcome1 welcome1 in welcomes1)
+        {
+            <tr>
+                <td>@welcome1.Cast</td>
+                <td>@welcome1.Crew</td>
+                <td>@welcome1.Id</td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
