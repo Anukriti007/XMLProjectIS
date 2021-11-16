@@ -1,12 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Movies;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace XMLProjectIS.Pages
 {
@@ -23,22 +18,21 @@ namespace XMLProjectIS.Pages
         {
             using (var webClient = new WebClient())
             {
-                string jsonString = webClient.DownloadString("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json");
-                string result = "";
+                string movie_details = "";
 
                 try
                 {
-                    result = webClient.DownloadString(jsonString);
+                    movie_details = webClient.DownloadString("https://imdb-api.com/en/API/Top250Movies/k_emiixec6");
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("Exception while calling API", e);
-
-
-
                 }
-                var movieList = Movies.MovieCollection.FromJson(jsonString);
-                ViewData["Movie_List"] = movieList;
+
+                var movieDetailsData = MovieDetails.Movies.FromJson(movie_details).Items;
+                ViewData["MovieDetails"] = movieDetailsData;
+
+
             }
         }
     }

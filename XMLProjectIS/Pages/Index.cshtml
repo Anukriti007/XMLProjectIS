@@ -2,32 +2,94 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var welcomes = (Movies.MovieCollection[])ViewData["Welcome"];
+    MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
 }
 
+<style>
+    .searchTxt {
+        width: 100%;
+    }
 
+    .movieCard {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 360px;
+        margin: 20px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 8px 0px #000000;
+        -webkit-box-shadow: 2px 2px 8px 0px #000000;
+    }
+
+    .movieContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .movieTitle{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .movieImg{
+        width: 100%;
+    }
+
+    .movieTitle {
+        display: flex;
+        justify-content: space-around;
+    }
+
+</style>
 
 <div class="text-center">
     <h1 class="display-4">Movies</h1>
 </div>
 
+<input id="Text1" type="text" class="searchTxt" />
+
+<hr />
+
+<div class="movieContainer">
+    @foreach (MovieDetails.Item movie in movies)
+    {
+        <div class="movieCard">
+            <div>
+                <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+            </div>
+            <div class="movieTitle">
+                <label>@movie.Title</label>
+                <label>@movie.Year</label>
+            </div>
+            <div class="movieTitle">
+                <label>IMDB Rating:-</label>
+                <label>@movie.ImDbRating</label>
+            </div>
+        </div>
+    }
+</div>
 
 
-<table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Year</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Movies.MovieCollection welcome in welcomes)
-        {
+    @*<table>
+        <thead>
             <tr>
-                <td>@welcome.Title</td>
-                <td>@welcome.Year</td>
+                <th>Title</th>
+                <th>Year</th>
+                <th>IMDB Rating</th>
+                <th>Ranking</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (MovieDetails.Item movie in movies)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.ImDbRating</td>
+                    <td>@movie.Rank</td>
+                </tr>
+            }
 
-    </tbody>
-</table>
+        </tbody>
+    </table>*@
