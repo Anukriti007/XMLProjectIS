@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
+    var welcomes = (Movies.MovieCollection[])ViewData["Welcome"];
 }
 
 
@@ -21,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (QuickType.Welcome welcome in welcomes)
+        @foreach (Movies.MovieCollection welcome in welcomes)
         {
             <tr>
                 <td>@welcome.Title</td>

@@ -6,16 +6,15 @@
 //
 //    var welcome = Welcome.FromJson(jsonString);
 
-namespace QuickType
+namespace Movies
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
+    using System;
 
-    public partial class Welcome
+    using System.Globalization;
+
+    public partial class MovieCollection
     {
         [JsonProperty("title")]
         public string Title { get; set; }
@@ -32,14 +31,14 @@ namespace QuickType
 
     public enum Genre { Action, Adventure, Animated, Biography, Comedy, Crime, Dance, Disaster, Documentary, Drama, Erotic, Family, Fantasy, FoundFootage, Historical, Horror, Independent, Legal, LiveAction, MartialArts, Musical, Mystery, Noir, Performance, Political, Romance, Satire, ScienceFiction, Short, Silent, Slasher, Sport, Sports, Spy, Superhero, Supernatural, Suspense, Teen, Thriller, War, Western };
 
-    public partial class Welcome
+    public partial class MovieCollection
     {
-        public static Welcome[] FromJson(string json) => JsonConvert.DeserializeObject<Welcome[]>(json, QuickType.Converter.Settings);
+        public static MovieCollection[] FromJson(string json) => JsonConvert.DeserializeObject<MovieCollection[]>(json, Movies.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome[] self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this MovieCollection[] self) => JsonConvert.SerializeObject(self, Movies.Converter.Settings);
     }
 
     internal static class Converter
