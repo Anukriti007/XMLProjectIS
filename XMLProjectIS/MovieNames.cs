@@ -53,94 +53,102 @@ namespace MovieNames
 
         public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
         {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            switch (value)
+            try
             {
-                case "Action":
-                    return Genre.Action;
-                case "Adventure":
-                    return Genre.Adventure;
-                case "Animated":
-                    return Genre.Animated;
-                case "Biography":
-                    return Genre.Biography;
-                case "Comedy":
-                    return Genre.Comedy;
-                case "Crime":
-                    return Genre.Crime;
-                case "Dance":
-                    return Genre.Dance;
-                case "Disaster":
-                    return Genre.Disaster;
-                case "Documentary":
-                    return Genre.Documentary;
-                case "Drama":
-                    return Genre.Drama;
-                case "Erotic":
-                    return Genre.Erotic;
-                case "Family":
-                    return Genre.Family;
-                case "Fantasy":
-                    return Genre.Fantasy;
-                case "Found Footage":
-                    return Genre.FoundFootage;
-                case "Historical":
-                    return Genre.Historical;
-                case "Horror":
-                    return Genre.Horror;
-                case "Independent":
-                    return Genre.Independent;
-                case "Legal":
-                    return Genre.Legal;
-                case "Live Action":
-                    return Genre.LiveAction;
-                case "Martial Arts":
-                    return Genre.MartialArts;
-                case "Musical":
-                    return Genre.Musical;
-                case "Mystery":
-                    return Genre.Mystery;
-                case "Noir":
-                    return Genre.Noir;
-                case "Performance":
-                    return Genre.Performance;
-                case "Political":
-                    return Genre.Political;
-                case "Romance":
-                    return Genre.Romance;
-                case "Satire":
-                    return Genre.Satire;
-                case "Science Fiction":
-                    return Genre.ScienceFiction;
-                case "Short":
-                    return Genre.Short;
-                case "Silent":
-                    return Genre.Silent;
-                case "Slasher":
-                    return Genre.Slasher;
-                case "Sport":
-                    return Genre.Sport;
-                case "Sports":
-                    return Genre.Sports;
-                case "Spy":
-                    return Genre.Spy;
-                case "Superhero":
-                    return Genre.Superhero;
-                case "Supernatural":
-                    return Genre.Supernatural;
-                case "Suspense":
-                    return Genre.Suspense;
-                case "Teen":
-                    return Genre.Teen;
-                case "Thriller":
-                    return Genre.Thriller;
-                case "War":
-                    return Genre.War;
-                case "Western":
-                    return Genre.Western;
+                if (reader.TokenType == JsonToken.Null) return null;
+                var value = serializer.Deserialize<string>(reader);
+                switch (value)
+                {
+                    case "Action":
+                        return Genre.Action;
+                    case "Adventure":
+                        return Genre.Adventure;
+                    case "Animated":
+                        return Genre.Animated;
+                    case "Biography":
+                        return Genre.Biography;
+                    case "Comedy":
+                        return Genre.Comedy;
+                    case "Crime":
+                        return Genre.Crime;
+                    case "Dance":
+                        return Genre.Dance;
+                    case "Disaster":
+                        return Genre.Disaster;
+                    case "Documentary":
+                        return Genre.Documentary;
+                    case "Drama":
+                        return Genre.Drama;
+                    case "Erotic":
+                        return Genre.Erotic;
+                    case "Family":
+                        return Genre.Family;
+                    case "Fantasy":
+                        return Genre.Fantasy;
+                    case "Found Footage":
+                        return Genre.FoundFootage;
+                    case "Historical":
+                        return Genre.Historical;
+                    case "Horror":
+                        return Genre.Horror;
+                    case "Independent":
+                        return Genre.Independent;
+                    case "Legal":
+                        return Genre.Legal;
+                    case "Live Action":
+                        return Genre.LiveAction;
+                    case "Martial Arts":
+                        return Genre.MartialArts;
+                    case "Musical":
+                        return Genre.Musical;
+                    case "Mystery":
+                        return Genre.Mystery;
+                    case "Noir":
+                        return Genre.Noir;
+                    case "Performance":
+                        return Genre.Performance;
+                    case "Political":
+                        return Genre.Political;
+                    case "Romance":
+                        return Genre.Romance;
+                    case "Satire":
+                        return Genre.Satire;
+                    case "Science Fiction":
+                        return Genre.ScienceFiction;
+                    case "Short":
+                        return Genre.Short;
+                    case "Silent":
+                        return Genre.Silent;
+                    case "Slasher":
+                        return Genre.Slasher;
+                    case "Sport":
+                        return Genre.Sport;
+                    case "Sports":
+                        return Genre.Sports;
+                    case "Spy":
+                        return Genre.Spy;
+                    case "Superhero":
+                        return Genre.Superhero;
+                    case "Supernatural":
+                        return Genre.Supernatural;
+                    case "Suspense":
+                        return Genre.Suspense;
+                    case "Teen":
+                        return Genre.Teen;
+                    case "Thriller":
+                        return Genre.Thriller;
+                    case "War":
+                        return Genre.War;
+                    case "Western":
+                        return Genre.Western;
+                }
             }
-            throw new Exception("Cannot unmarshal type Genre");
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Cannot unmarshal type Genre");
+            }
+
         }
 
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
