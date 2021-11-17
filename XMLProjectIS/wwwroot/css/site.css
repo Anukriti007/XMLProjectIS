@@ -69,3 +69,42 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+.searchTxt {
+    width: 100%;
+}
+
+.movieCard {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 360px;
+    margin: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px 0px #000000;
+    -webkit-box-shadow: 2px 2px 8px 0px #000000;
+}
+
+.movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movieTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movieImg {
+    width: 100%;
+}
+
+.movieTitle {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+

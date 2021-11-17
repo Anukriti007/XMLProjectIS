@@ -18,7 +18,7 @@ namespace XMLProjectIS.Pages
         {
             using (var webClient = new WebClient())
             {
-                string movie_details = "";
+                string movie_details = string.Empty;
 
                 try
                 {
