@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
     MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
+    TV.Item[] tvdetails = (TV.Item[])ViewData["TVDetails"];
 }
 
 <style>
@@ -70,6 +71,25 @@
     }
 </div>
 
+
+<div class="TVContainer">
+    @foreach (TV.Item TVs in tvdetails)
+    {
+        <div class="TvCard">
+            <div>
+                <img src="@TVs.Image" class="movieImg" alt="Img Not Found" />
+            </div>
+            <div class="TVTitle">
+                <label>@TVs.Title</label>
+                <label>@TVs.Year</label>
+            </div>
+            <div class="TvTitle">
+                <label>IMDB Rating:-</label>
+                <label>@TVs.ImDbRating</label>
+            </div>
+        </div>
+    }
+</div>
 
     @*<table>
         <thead>
