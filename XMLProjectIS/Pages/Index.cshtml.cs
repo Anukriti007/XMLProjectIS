@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using QuickType;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace XMLProjectIS.Pages
 {
@@ -23,14 +19,22 @@ namespace XMLProjectIS.Pages
         {
             using (var webClient = new WebClient())
             {
-                string jsonString = webClient.DownloadString("https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/csvjson(2).json");
-                var welcome = Welcome.FromJson(jsonString);
-                ViewData["Welcome"] = welcome;
-                string jsonString1 = webClient.DownloadString("https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/csvjson(1).json");
-                var welcome1 = Welcome.FromJson(jsonString1);
-                ViewData["Welcome1"] = welcome1;
+                string movie_details = "";
+
+                try
+                {
+                    movie_details = webClient.DownloadString("https://imdb-api.com/en/API/Top250Movies/k_emiixec6");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception while calling API", e);
+                }
+
+                var movieDetailsData = MovieDetails.Movies.FromJson(movie_details).Items;
+                ViewData["MovieDetails"] = movieDetailsData;
+
+
             }
         }
     }
 }
-

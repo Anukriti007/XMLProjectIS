@@ -2,56 +2,94 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var welcomes = (QuickType.Welcome[])ViewData["Welcome"];
-    var welcomes1 = (QuickType1.Welcome1[])ViewData["Welcome1"];
+    MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
 }
+
+<style>
+    .searchTxt {
+        width: 100%;
+    }
+
+    .movieCard {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 360px;
+        margin: 20px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 8px 0px #000000;
+        -webkit-box-shadow: 2px 2px 8px 0px #000000;
+    }
+
+    .movieContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .movieTitle{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .movieImg{
+        width: 100%;
+    }
+
+    .movieTitle {
+        display: flex;
+        justify-content: space-around;
+    }
+
+</style>
 
 <div class="text-center">
     <h1 class="display-4">Movies</h1>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Adult</th>
-            <th>Budget</th>
-            <th>Title</th>
+<input id="Text1" type="text" class="searchTxt" />
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (QuickType.Welcome welcome in welcomes)
-        {
+<hr />
+
+<div class="movieContainer">
+    @foreach (MovieDetails.Item movie in movies)
+    {
+        <div class="movieCard">
+            <div>
+                <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+            </div>
+            <div class="movieTitle">
+                <label>@movie.Title</label>
+                <label>@movie.Year</label>
+            </div>
+            <div class="movieTitle">
+                <label>IMDB Rating:-</label>
+                <label>@movie.ImDbRating</label>
+            </div>
+        </div>
+    }
+</div>
+
+
+    @*<table>
+        <thead>
             <tr>
-                <td>@welcome.Adult</td>
-                <td>@welcome.Budget</td>
-                <td>@welcome.Title</td>
-
+                <th>Title</th>
+                <th>Year</th>
+                <th>IMDB Rating</th>
+                <th>Ranking</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (MovieDetails.Item movie in movies)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.ImDbRating</td>
+                    <td>@movie.Rank</td>
+                </tr>
+            }
 
-    </tbody>
-</table>
-
-<table>
-    <thead>
-        <tr>
-            <th>Cast</th>
-            <th>Crew</th>
-            <th>Id</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (QuickType1.Welcome1 welcome1 in welcomes1)
-        {
-            <tr>
-                <td>@welcome1.Cast</td>
-                <td>@welcome1.Crew</td>
-                <td>@welcome1.Id</td>
-
-            </tr>
-        }
-
-    </tbody>
-</table>
+        </tbody>
+    </table>*@
