@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
+    MovieDetails.Item[] moviesDetails = (MovieDetails.Item[])ViewData["MovieDetails"];
 }
 <head>
    <link rel="stylesheet" href="~/css/StyleSheet.css">
@@ -18,7 +18,7 @@
 <hr />
 
 <div class="movieContainer">
-    @foreach (MovieDetails.Item movie in movies)
+    @foreach (MovieDetails.Item movie in moviesDetails)
     {
         <div class="movieCard">
             <div>
