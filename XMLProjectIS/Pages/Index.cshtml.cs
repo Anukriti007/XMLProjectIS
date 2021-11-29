@@ -12,6 +12,13 @@ namespace XMLProjectIS.Pages
     public class IndexModel : PageModel
     {
 
+        [BindProperty]
+
+        public string MovieIdentifier { get; set; }
+        public SelectList MovieList { get; set; }
+        public string SearchMovie { get; set; }
+
+
         public void OnGet()
         {
 
