@@ -24,8 +24,9 @@
                     <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
                 </div>
                 <div class="TVTitle">
-                    <label>@TVs.Title</label>
-                    <label>@TVs.Year</label>
+                    <a asp-page="./Details" asp-route-id="@TVs.Id">
+                        <label>@TVs.Title</label></a>
+                        <label>@TVs.Year</label>
                 </div>
                 <div class="TvTitle">
                     <label>IMDB Rating:-</label>

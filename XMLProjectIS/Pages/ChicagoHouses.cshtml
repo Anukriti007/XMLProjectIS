@@ -1,9 +1,8 @@
-﻿@page
-@model RealEstate.Pages.HousesModel
+﻿@*@page
+@model ChicagoHousePage.Pages.ChicagoHousesModel
 @{
-    var TheHousesList = (List<HouseData.Houses>)ViewData["UserHousesList"];
+    var chicagohouses = (ChicagoHousesData.ChicagoHouses[])ViewData["ChicagoHouses"];
 }
-
 <h1>Top 15 Housing List in Chicago</h1>
 <hr />
 <div class="text-center">
@@ -23,18 +22,18 @@
         <tbody>
             @{
                 int FirstFifteenHouses = 0;
-                foreach (HouseData.Houses house in TheHousesList)
+                foreach (ChicagoHousesData.ChicagoHouses chicagohouse in chicagohouses)
                 {
                     FirstFifteenHouses = FirstFifteenHouses + 1;
-                        <tr>
-                            <td>@FirstFifteenHouses</td>
-                            <td>@house.PropertyName</td>
-                            <td>@house.Address</td>
-                            <td>@house.CommunityArea</td>
-                            <td>@house.Units</td>
-                            <td>@house.ManagementCompany</td>
-                            <td>@house.PhoneNumber </td>
-                        </tr>
+                    <tr>
+                        <td>@FirstFifteenHouses</td>
+                        <td>@chicagohouse.PropertyName</td>
+                        <td>@chicagohouse.Address</td>
+                        <td>@chicagohouse.CommunityArea</td>
+                        <td>@chicagohouse.Units</td>
+                        <td>@chicagohouse.ManagementCompany</td>
+                        <td>@chicagohouse.PhoneNumber </td>
+                    </tr>
 
                     if (FirstFifteenHouses == 15)
                     { break; }
@@ -46,3 +45,4 @@
     </table>
 </div>
 
+*@

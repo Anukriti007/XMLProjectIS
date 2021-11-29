@@ -27,7 +27,7 @@
                     <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
                 </div>
                 <div class="movieTitle">
-                    <a asp-page="./ItemData" asp-route-id="@movie.Title">
+                    <a asp-page="./Details" asp-route-id="@movie.Id">
                         <label>
                             @movie.Title
                         </label>
@@ -56,8 +56,10 @@
                     <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
                 </div>
                 <div class="TVTitle">
-                    <label>@TVs.Title</label>
-                    <label>@TVs.Year</label>
+                    <a asp-page="./Details" asp-route-id="@TVs.Id">
+                        <label>@TVs.Title</label>
+                    </a>
+                        <label>@TVs.Year</label>
                 </div>
                 <div class="TvTitle">
                     <label>IMDB Rating:-</label>
