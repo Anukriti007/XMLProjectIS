@@ -2,6 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "";
+    var MovieList = (List<MovieDetails.Item>)ViewData["UserMoviesList"];
 
 }
 
@@ -21,8 +22,29 @@
                 BingeWatch.com!!!
             </h1>
         </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12">
+            <br />
+            <p>
+                BingeWatch lets you find the best 250 Movies 🎬 and TV Shows 📺 and check reviews and ratings from IMDB.
+                Experience a User-friendly interface to find movies or shows for your next watch.
+
+            </p>
+        </div>
+
+        <div class="col-12">
+            <img src="~/img/image2.png" alt="Home Image" />
+        </div>
+    </div>
+
+
 
 </body>
+
+
 
 
 
