@@ -1,0 +1,69 @@
+﻿@page
+@model XMLProjectIS.Pages.ItemDataModel
+@{
+    MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
+    TV.Item[] tvdetails = (TV.Item[])ViewData["TVDetails"];
+
+}
+
+
+<div class="col-sm-12 search">
+    <form action="/ItemData" method="get" class="form-inline col-sm-12">
+        <input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie" />
+        <button type="submit" class="btn btn-primary col-sm-4">Search</button>
+    </form>
+</div>
+
+@if (movies[0] != null)
+{
+
+    <div class="movieContainer">
+        <h3>Movies Result</h3>
+
+        @foreach (MovieDetails.Item movie in movies)
+        {
+            <div class="movieCard">
+                <div>
+                    <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+                </div>
+                <div class="movieTitle">
+                    <a asp-page="./ItemData" asp-route-id="@movie.Title">
+                        <label>
+                            @movie.Title
+                        </label>
+                    </a>
+                    <label>@movie.Year</label>
+                </div>
+                <div class="movieTitle">
+                    <label>IMDB Rating:-</label>
+                    <label>@movie.ImDbRating</label>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+
+@if (tvdetails[0] != null)
+{
+
+    <div class="TVContainer">
+        <h3>TV Result</h3>
+        @foreach (TV.Item TVs in tvdetails)
+        {
+            <div class="TvCard">
+                <div>
+                    <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
+                </div>
+                <div class="TVTitle">
+                    <label>@TVs.Title</label>
+                    <label>@TVs.Year</label>
+                </div>
+                <div class="TvTitle">
+                    <label>IMDB Rating:-</label>
+                    <label>@TVs.ImDbRating</label>
+                </div>
+            </div>
+        }
+    </div>
+}
