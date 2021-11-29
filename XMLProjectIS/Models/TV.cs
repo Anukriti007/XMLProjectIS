@@ -59,12 +59,12 @@ namespace TV
 
     public partial class TVDetails
     {
-        public static TVDetails FromJson(string json) => JsonConvert.DeserializeObject<TVDetails>(json, QuickType.Converter.Settings);
+        public static TVDetails FromJson(string json) => JsonConvert.DeserializeObject<TVDetails>(json, TV.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this TVDetails self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this TVDetails self) => JsonConvert.SerializeObject(self, TV.Converter.Settings);
     }
 
     internal static class Converter

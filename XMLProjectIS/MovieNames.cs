@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿/*using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 
@@ -283,3 +283,4 @@ namespace MovieNames
         public static readonly GenreConverter Singleton = new GenreConverter();
     }
 }
+*/
