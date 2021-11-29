@@ -1,0 +1,38 @@
+﻿@page
+@model XMLProjectIS.Pages.TVModel
+@{
+    TV.Item[] tvdetails = (TV.Item[])ViewData["TVDetails"];
+}
+
+
+<head>
+    <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
+</head>
+
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">TV Shows</h1>
+    </div>
+
+
+    <div class="TVContainer">
+        @foreach (TV.Item TVs in tvdetails)
+        {
+            <div class="TvCard">
+                <div>
+                    <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
+                </div>
+                <div class="TVTitle">
+                    <label>@TVs.Title</label>
+                    <label>@TVs.Year</label>
+                </div>
+                <div class="TvTitle">
+                    <label>IMDB Rating:-</label>
+                    <label>@TVs.ImDbRating</label>
+                </div>
+            </div>
+        }
+    </div>
+
+</body>

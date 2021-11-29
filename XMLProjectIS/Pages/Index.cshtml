@@ -1,97 +1,131 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
-    MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
-    TV.Item[] tvdetails = (TV.Item[])ViewData["TVDetails"];
+    ViewData["Title"] = "";
+    
 }
 
-<style>
-    .searchTxt {
-        width: 100%;
-    }
 
-    .movieCard {
-        display: flex;
-        flex-direction: column;
-        width: 200px;
-        height: 360px;
-        margin: 20px;
-        border: 1px solid black;
-        box-shadow: 2px 2px 8px 0px #000000;
-        -webkit-box-shadow: 2px 2px 8px 0px #000000;
-    }
 
-    .movieContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .movieTitle{
-        display: flex;
-        justify-content: space-between;
-    }
 
-    .movieImg{
-        width: 100%;
-    }
 
-    .movieTitle {
-        display: flex;
-        justify-content: space-around;
-    }
 
-</style>
+@*<style>
+        .searchTxt {
+            width: 100%;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Movies</h1>
-</div>
+        .movieCard {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 360px;
+            margin: 20px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 8px 0px #000000;
+            -webkit-box-shadow: 2px 2px 8px 0px #000000;
+        }
 
-<input id="Text1" type="text" class="searchTxt" />
+        .movieContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
-<hr />
+        .movieTitle{
+            display: flex;
+            justify-content: space-between;
+        }
 
-<div class="movieContainer">
-    @foreach (MovieDetails.Item movie in movies)
-    {
-        <div class="movieCard">
-            <div>
-                <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+        .movieImg{
+            width: 100%;
+        }
+
+        .movieTitle {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .searchTxt {
+            width: 100%;
+        }
+
+        .TvCard {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 360px;
+            margin: 20px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 8px 0px #000000;
+            -webkit-box-shadow: 2px 2px 8px 0px #000000;
+        }
+
+        .TVContainer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .TVTitle {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .display-4 {
+            width: 100%;
+        }
+    </style>
+
+    <div class="text-center">
+        <h1 class="display-4">Movies</h1>
+    </div>
+
+    <input id="Text1" type="text" class="searchTxt" />
+
+    <hr />*@
+
+@*<div class="movieContainer">
+        @foreach (MovieDetails.Item movie in movies)
+        {
+            <div class="movieCard">
+                <div>
+                    <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+                </div>
+                <div class="movieTitle">
+                    <label>@movie.Title</label>
+                    <label>@movie.Year</label>
+                </div>
+                <div class="movieTitle">
+                    <label>IMDB Rating:-</label>
+                    <label>@movie.ImDbRating</label>
+                </div>
             </div>
-            <div class="movieTitle">
-                <label>@movie.Title</label>
-                <label>@movie.Year</label>
-            </div>
-            <div class="movieTitle">
-                <label>IMDB Rating:-</label>
-                <label>@movie.ImDbRating</label>
-            </div>
-        </div>
-    }
-</div>
+        }
+    </div>*@
 
 
-<div class="TVContainer">
-    @foreach (TV.Item TVs in tvdetails)
-    {
-        <div class="TvCard">
-            <div>
-                <img src="@TVs.Image" class="movieImg" alt="Img Not Found" />
+@*<div class="TVContainer">
+        @foreach (TV.Item TVs in tvdetails)
+        {
+            <div class="TvCard">
+                <div>
+                    <img src="@TVs.Image" class="movieImg" alt="Img Not Found" />
+                </div>
+                <div class="TVTitle">
+                    <label>@TVs.Title</label>
+                    <label>@TVs.Year</label>
+                </div>
+                <div class="TvTitle">
+                    <label>IMDB Rating:-</label>
+                    <label>@TVs.ImDbRating</label>
+                </div>
             </div>
-            <div class="TVTitle">
-                <label>@TVs.Title</label>
-                <label>@TVs.Year</label>
-            </div>
-            <div class="TvTitle">
-                <label>IMDB Rating:-</label>
-                <label>@TVs.ImDbRating</label>
-            </div>
-        </div>
-    }
-</div>
+        }
+    </div>*@
 
-    @*<table>
+@*<table>
         <thead>
             <tr>
                 <th>Title</th>
