@@ -1,4 +1,19 @@
 ﻿@page
 @model XMLProjectIS.Pages.DetailsModel
 @{
+    MovieDetails.Item movies = (MovieDetails.Item)ViewData["SelectedMovieDetails"];
+
+}
+
+
+@if (movies != null)
+
+{
+    <h1>Selected Movie Details</h1>
+    <div class="text-center">
+        <h3>Name: @movies.FullTitle</h3>
+        <h4>Cast: @movies.Crew</h4>
+        <img src="@movies.Image" />
+
+    </div>
 }
