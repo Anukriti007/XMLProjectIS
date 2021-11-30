@@ -4,7 +4,7 @@
 ________________________________________
 **Introduction**
 
-BingWatch.com lets you discover Top 250 Movies and TV Shows alongwith Top 15 Breweries and Top 15 Property listings in Chicago.
+BingWatch.com lets you discover Latest Top 250 Movies and TV Shows alongwith Top 15 Breweries and Top 15 Property listings in Chicago.
 
 •	Search movie by Title
 
@@ -20,9 +20,9 @@ ________________________________________
 
 **Data Feeds**
 
-Dataset of 250 movies: https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250Movies.json
+Dataset of 250 movies: https://imdb-api.com/en/API/Top250Movies/k_7hid6bat
 
-Dataset of 250 TV Shows: https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250TVShows.json
+Dataset of 250 TV Shows: https://imdb-api.com/en/API/Top250TVs/k_7hid6bat
 
 Dataset of Chicago Property listings: https://realestate20211125150037.azurewebsites.net/HousingRaw
 
@@ -30,23 +30,23 @@ Dataset of Breweries: https://breweryarc.azurewebsites.net/breweryentire
 ________________________________________
 **Functional Requirements**:
 
-List movie cards of IMDB's Top 250 Movies or Top 250 TV Shows.
+List movie cards of IMDB's Latest Top 250 Movies or Top 250 TV Shows.
 
-**_Scenario_**: A person can view top 250 movies in a form of a card with its poster, Title and IMDB Rating.
+**_Scenario_**: A person can view latest top 250 movies in a form of a card with its poster, Title and IMDB Rating.
 
 **_Dependencies_**: IMDB Movie Dataset is available and accessible.
 
 **_Assumptions_**: Ratings are out of 10.0
 
 
-**_Scenario_**: A person can view top 250 TV Shows in a form of a card with its poster, Title and IMDB Rating.
+**_Scenario_**: A person can view latest top 250 TV Shows in a form of a card with its poster, Title and IMDB Rating.
 
 **_Dependencies_**: IMDB TV Show Dataset is available and accessible.
 
 **_Assumptions_**: Ratings are out of 10.0
 
 
-**_Scenario_**: A person can search title from top 250 movies and TV shows.
+**_Scenario_**: A person can search title from latest top 250 movies and TV shows.
 
 **_Dependencies_**: IMDB Movie and TV Show Dataset is available and accessible.
 
@@ -54,7 +54,7 @@ List movie cards of IMDB's Top 250 Movies or Top 250 TV Shows.
 
 
 **Example 1.1**
-Given: Data of Top 250 Movies and TV Shows is available
+Given: Data of Latest Top 250 Movies and TV Shows is available
 
 When Search for "Fight Club"
 
@@ -73,7 +73,7 @@ When clicked on Title, more details are displayed:
 
 
 **Example 1.2**
-Given: Data of Top 250 Movies and TV Shows is available
+Given: Data of Latest Top 250 Movies and TV Shows is available
 
 When Search for "Chernobyl"
 
