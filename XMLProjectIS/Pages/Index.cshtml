@@ -64,17 +64,17 @@
 
 
         <div class="col-12">
-          
-                <form action="/ItemData" method="get" class="row">
-                    <div class="col-8 pt-1">
-                        <input asp-for="MovieIdentifier" class=" form-control input pt-1" placeholder="Search a Movie or a TV Show" />
-                    </div>
-                    @*<input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie or a TV Show" />*@
-                    <div class="col-4">
+
+            <form action="/ItemData" method="get" class="row">
+                <div class="col-8 pt-1">
+                    <input asp-for="MovieIdentifier" class=" form-control input pt-1" placeholder="Search a Movie or a TV Show" />
+                </div>
+                @*<input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie or a TV Show" />*@
+                <div class="col-4">
                     <button type="submit" class="btn btn-primary">Search</button>
-                     </div>
-                        </form>
-          
+                </div>
+            </form>
+
         </div>
 
         @*<div class="d-flex justify-content-center bg-secondary mb-3">
@@ -98,6 +98,8 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item carousel-1 active">
@@ -108,6 +110,12 @@
                     </div>
                     <div class="carousel-item carousel-1">
                         <img src="/img/chernobyl.jpg" class="d-block carousel-image" alt="Title 3">
+                    </div>
+                    <div class="carousel-item carousel-1">
+                        <img src="/img/Web-Series-Review-Scam-1992.jpeg" class="d-block carousel-image" alt="Title 4">
+                    </div>
+                    <div class="carousel-item carousel-1">
+                        <img src="/img/office.jpg" class="d-block carousel-image" alt="Title 5">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -122,7 +130,9 @@
 
         </div>
 
+
         <div class="col-12 image text-center">
+            <h3 style="font-family:Bahnschrift"><strong>ADVERTISEMENTS</strong></h3>
             <a asp-page="./BreweryArcs">
                 <img src="/img/Beer Poster.png" alt="Beer poster" height="200" />
             </a>
@@ -131,6 +141,16 @@
             </a>
 
         </div>
+
+        <div class="col-12 text-center image">
+            
+                <h3 style="font-family:Bahnschrift"><strong>We would like to hear from you!</strong></h3>
+                <p style="font-size:medium">Contact us: team@bingewatch.com</p>
+                <img src="/img/WhatsApp Image 2021-11-30 at 16.38.42.jpeg" alt="Team photo" height="300px" />
+            
+        </div>
+
+
 
     </div>
 

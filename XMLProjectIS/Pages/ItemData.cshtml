@@ -7,14 +7,18 @@
 }
 
 
-<body style="margin-top:0px">
+@*<head>
+    <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
+</head>*@
 
-    <div class="col-sm-12 search">
+<body style="margin-top:0px; font-family: Bahnschrift">
+
+    @*<div class="col-sm-12 search">
         <form action="/ItemData" method="get" class="form-inline col-sm-12">
             <input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie or a TV Show" />
             <button type="submit" class="btn btn-primary col-sm-4">Search</button>
         </form>
-    </div>
+    </div>*@
 
     @if (movies[0] != null)
     {
