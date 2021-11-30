@@ -9,9 +9,8 @@ namespace XMLProjectIS
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Age { get; set; }
-        public string MovieName { get; set; }
-        public string TVShow { get; set; }
+        public string MoviesTVs{ get; set; }
+        public string Comments { get; set; }
 
     }
 }
