@@ -15,7 +15,7 @@ namespace BreweryArcsPage.Pages
         {
             using(var webclient = new WebClient())
             {
-                string breweryAData = webclient.DownloadString("https://api.openbrewerydb.org/breweries");
+                string breweryAData = webclient.DownloadString("https://breweryarc.azurewebsites.net/breweryentire");
                 var breweryarcs = BreweryArcs.FromJson(breweryAData);
                 ViewData["BreweryArcs"] = breweryarcs;
             }
