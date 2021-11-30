@@ -24,12 +24,13 @@ Dataset of 250 movies: https://raw.githubusercontent.com/Anukriti007/XMLProjectI
 
 Dataset of 250 TV Shows: https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250TVShows.json
 
-Dataset if Chicago Property listings: https://realestate20211125150037.azurewebsites.net/HousingRaw
+Dataset of Chicago Property listings: https://realestate20211125150037.azurewebsites.net/HousingRaw
 
 Dataset of Breweries: https://breweryarc.azurewebsites.net/breweryentire
 ________________________________________
-**Functional Requirements**
-List movie cards of IMDB's Top 250 Movies.
+**Functional Requirements**:
+
+List movie cards of IMDB's Top 250 Movies or Top 250 TV Shows.
 
 **_Scenario_**: A person can view top 250 movies in a form of a card with its poster, Title and IMDB Rating.
 
