@@ -20,6 +20,7 @@
 }
 
 .TVTitle {
+    font-style: oblique;
     display: flex;
     justify-content: space-between;
 }
@@ -29,6 +30,7 @@
 }
 
 .TVTitle {
+
     display: flex;
     justify-content: space-around;
 }
@@ -55,6 +57,7 @@
 }
 
 .movieTitle {
+    font-style:oblique;
     display: flex;
     justify-content: space-between;
 }
@@ -70,7 +73,15 @@
 
 
 .carousel-1 {
-    height: 400px;
+    height: 200px;
     width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.image{
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
 

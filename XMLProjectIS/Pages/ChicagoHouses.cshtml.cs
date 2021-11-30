@@ -16,7 +16,7 @@ namespace ChicagoHousePage.Pages
 
                using(var webClient = new WebClient())
             {
-                string chicagoHData = webClient.DownloadString("https://data.cityofchicago.org/resource/s6ha-ppgi.json");
+                string chicagoHData = webClient.DownloadString("https://realestate20211125150037.azurewebsites.net/HousingRaw");
                 var chicagohouses = ChicagoHouses.FromJson(chicagoHData);
                 ViewData["ChicagoHouses"] = chicagohouses;
             }

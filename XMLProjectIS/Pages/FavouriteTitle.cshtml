@@ -7,28 +7,31 @@
 
 <body>
     <div margin="auto">
-        <h1> Your Favorite Movies and TV Shows!!  </h1></ br>
+        <h1> Let us know your reviews!!  </h1></ br>
         <form method="post">
             <input type="text" class=" form-control mr-sm-2 col-sm-6" name="FirstName" placeholder="First Name" size="40" /><br />
             <input type="text" class=" form-control mr-sm-2 col-sm-6" name="LastName" placeholder="Last Name" size="40" /><br />
-            <input type="text" class=" form-control mr-sm-2 col-sm-6" name="Age" placeholder="Age" size="20" /><br />
-            <input type="text" class=" form-control mr-sm-2 col-sm-6" name="MovieName" placeholder="Favorite Movie Name" size="40" /><br />
-            <input type="text" class=" form-control mr-sm-2 col-sm-6" name="TVShow" placeholder="Favorite TV Show" size="100" /><br />
+            <input type="text" class=" form-control mr-sm-2 col-sm-6" name="MovieName" placeholder="Favorite Movies/ TV Shows" size="40" /><br />
+            <input type="text" class=" form-control mr-sm-2 col-sm-6" name="TVShow" placeholder="Comments" size="100" /><br />
             <input id="Button1" type="submit" class="w3-btn w3-blue-grey" value="Submit" />
         </form>
     </div>
     <div>
         <hr />
         <table class="table table-striped table-light">
-            <tr><th>First Name</th><th>Last Name</th><th>Age</th><th>Favourite Movie Name</th><th>Favorite TV Show</th></tr>
+            <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Favourite Movies/ TV Shows</th>
+            <th>Comments</th>
+            </tr>
             @{ foreach (XMLProjectIS.Movie movie in movies)
                 {
                     <tr>
                         <td>@movie.FirstName</td>
                         <td>@movie.LastName</td>
-                        <td>@movie.Age</td>
-                        <td>@movie.MovieName</td>
-                        <td>@movie.TVShow</td>
+                        <td>@movie.MoviesTVs</td>
+                        <td>@movie.Comments</td>
                     </tr>
                 } 
              }

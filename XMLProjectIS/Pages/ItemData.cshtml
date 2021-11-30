@@ -9,7 +9,7 @@
 
 <div class="col-sm-12 search">
     <form action="/ItemData" method="get" class="form-inline col-sm-12">
-        <input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie" />
+        <input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie or a TV Show" />
         <button type="submit" class="btn btn-primary col-sm-4">Search</button>
     </form>
 </div>
@@ -69,3 +69,13 @@
         }
     </div>
 }
+
+
+
+
+@if( movies[0] == null && tvdetails[0] == null)
+   {
+     <div class="text-left">
+         Sorry!! Your search result not found in Top 250 Movies and TV Shows.
+     </div>
+   }

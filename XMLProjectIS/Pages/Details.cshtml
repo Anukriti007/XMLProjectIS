@@ -6,27 +6,40 @@
 
 }
 
+<<head>
+    <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
+</head>
 
-@if (movies != null)
 
-{
-    <h1>Selected Movie Details</h1>
-    <div class="text-center">
-        <h3>Name: @movies.FullTitle</h3>
-        <h4>Cast: @movies.Crew</h4>
-        <img src="@movies.Image" />
+ <body>
 
-    </div>
-}
+     @if (movies != null)
 
-@if (tvdetails != null)
+     {
+         <h1>Selected Movie Details</h1>
+         <div class="text-center">
+             <h3>Name: @movies.FullTitle </h3>
+             <img src="@movies.Image" height="450" />
+             <h4>Rank: @movies.Rank</h4>
+             <h5>Cast: @movies.Crew</h5>
+             <h5>IMDB Rating: @movies.ImDbRating , Vote count: @movies.ImDbRatingCount</h5>
 
-{
-   <h1>Selected TV Details</h1>
-    <div class="text-center">
-        <h3>Name: @tvdetails.Title</h3>
-        <h4>Cast: @tvdetails.Crew</h4>
-        <img src="@tvdetails.Image" />
 
-    </div>
-}
+         </div>
+     }
+
+     @if (tvdetails != null)
+
+     {
+         <h1>Selected TV Details</h1>
+         <div class="text-center">
+             <h3>Name: @tvdetails.FullTitle </h3>
+             <img src="@tvdetails.Image" height="450"/>
+             <h4>Rank: @tvdetails.Rank</h4>
+             <h5>Cast: @tvdetails.Crew</h5>
+             <h5>IMDB Rating: @tvdetails.ImDbRating , Vote count: @tvdetails.ImDbRatingCount</h5>
+
+         </div>
+     }
+
+ </body>

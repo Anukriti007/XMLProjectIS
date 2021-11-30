@@ -16,7 +16,6 @@ namespace XMLProjectIS.Pages
             APICall adapter = new APICall();
 
             var movieDetailsData = adapter.GetMovieDetails();
-            var TVDetailsData = adapter.GetTVDetails();
             MovieIdentifier = Request.Query["MovieIdentifier"];
 
             MovieDetails.Item[] specificMovieSearch = new MovieDetails.Item[1];
@@ -33,6 +32,7 @@ namespace XMLProjectIS.Pages
                 }
                 if (specificMovieSearch[0] == null)
                 {
+                    var TVDetailsData = adapter.GetTVDetails();
                     TV.Item[] specificTVSearch = new TV.Item[1];
                     foreach (TV.Item searchTV in TVDetailsData)
                     {
@@ -44,12 +44,10 @@ namespace XMLProjectIS.Pages
 
                     }
                     TVDetailsData = specificTVSearch;
+                    ViewData["TVDetails"] = TVDetailsData;
                 }
 
                 movieDetailsData = specificMovieSearch;
-
-
-
             }
             else
             {
@@ -59,7 +57,7 @@ namespace XMLProjectIS.Pages
             }
 
             ViewData["MovieDetails"] = movieDetailsData;
-            ViewData["TVDetails"] = TVDetailsData;
+            
 
 
 
