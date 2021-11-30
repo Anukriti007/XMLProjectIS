@@ -32,39 +32,39 @@
     <div class="container-fluid pt-3 content">
         <h2 class="text-center white" ><strong>Looking for an ideal home in Chicago?</strong></h2>
     </div> 
-           <div class="container">
-               <div class="row">
-                   <div class="col-12">
-                       <table class="table table-dark">
-                           <thead>
-                               <tr>
-                                   <th scope="col">Sr. no.</th>
-                                   <th scope="col">Postal Address</th>
-                                   <th scope="col">Unit Area (in sqfts)</th>
-                               </tr>
-                           </thead>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sr. no.</th>
+                            <th scope="col">Postal Address</th>
+                            <th scope="col">Unit Area (in sqfts)</th>
+                        </tr>
+                    </thead>
 
-                           <tbody>
-                               @{
-                                   int FirstFifteenHouses = 0;
-                                   foreach (ChicagoHousesData.ChicagoHouses chicagohouse in chicagohouses)
-                                   {
-                                       FirstFifteenHouses = FirstFifteenHouses + 1;
-                                       <tr>
-                                           <td>@FirstFifteenHouses</td>
-                                           <td>@chicagohouse.Address</td>
-                                           <td>@chicagohouse.Units</td>
-                                       </tr>
+                    <tbody>
+                        @{
+                            int FirstFifteenHouses = 0;
+                            foreach (ChicagoHousesData.ChicagoHouses chicagohouse in chicagohouses)
+                            {
+                                FirstFifteenHouses = FirstFifteenHouses + 1;
+                                <tr>
+                                    <td>@FirstFifteenHouses</td>
+                                    <td>@chicagohouse.Address</td>
+                                    <td>@chicagohouse.Units</td>
+                                </tr>
 
-                                       if (FirstFifteenHouses == 15)
-                                       { break; }
+                                if (FirstFifteenHouses == 15)
+                                { break; }
 
 
-                                   }
-                               }
-                           </tbody>
-                       </table>
-                   </div>
-               </div>
-           </div>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
