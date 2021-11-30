@@ -3,37 +3,66 @@
 @{
     var breweryarcs = (BreweryArcData.BreweryArcs[])ViewData["BreweryArcs"];
 }
-<h2 class="text-center">Thinking of drinking beer while watching a movie?</h2>
-<hr />
-<div class="text-center">
-    <table class="table table-striped table-light">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>City</th>
-                <th>Phone</th>
-            </tr>
-        </thead>
 
-        <tbody>
-            @{
-                int FirstFifteenBrewery = 0;
-                foreach (BreweryArcData.BreweryArcs breweryarc in breweryarcs)
-                {
-                    FirstFifteenBrewery = FirstFifteenBrewery + 1;
+<head>
+    <style>
+        .bg-img1 {
+            background-image: url("https://media.istockphoto.com/photos/beer-tasting-picture-id488101157?b=1&k=20&m=488101157&s=170667a&w=0&h=Jyg9GeyKOj4CzL7oND2AvUsV9pB0EqxfF7UcbTjsH24=");
+            background-color: #cccccc;
+            @*background-position: center;
+    *@ background-repeat: no-repeat;
+            @*background-size: cover;
+    *@ @*position: relative;
+    background-size: cover;
+    *@
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            background-image: url("https://media.istockphoto.com/photos/beer-tasting-picture-id488101157?b=1&k=20&m=488101157&s=170667a&w=0&h=Jyg9GeyKOj4CzL7oND2AvUsV9pB0EqxfF7UcbTjsH24=");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="text-center">Thinking of drinking beer while watching a movie?</h2>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-dark">
+                    <thead>
                         <tr>
-                          
-                            <td>@breweryarc.Name</td>
-                            <td>@breweryarc.City</td>
-                            <td>@breweryarc.Phone</td>
+                            <th>Name</th>
+                            <th>City</th>
+                            <th>Phone</th>
                         </tr>
+                    </thead>
 
-                    if (FirstFifteenBrewery == 15)
-                    { break; }
+                    <tbody>
+                        @{
+                            int FirstFifteenBrewery = 0;
+                            foreach (BreweryArcData.BreweryArcs breweryarc in breweryarcs)
+                            {
+                                FirstFifteenBrewery = FirstFifteenBrewery + 1;
+                                <tr>
+
+                                    <td>@breweryarc.Name</td>
+                                    <td>@breweryarc.City</td>
+                                    <td>@breweryarc.Phone</td>
+                                </tr>
+
+                                if (FirstFifteenBrewery == 15)
+                                { break; }
 
 
-                }
-            }
-        </tbody>
-    </table>
-</div>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+           </div>
+           </div>
+    
+</body>
