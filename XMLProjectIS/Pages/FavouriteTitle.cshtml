@@ -5,7 +5,9 @@
 }
 
 
-<body>
+<body style="margin-top:0px">
+
+
     <div margin="auto">
         <h1> Let us know your reviews!!  </h1></ br>
         <form method="post">
@@ -20,10 +22,10 @@
         <hr />
         <table class="table table-striped table-light">
             <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Favourite Movies/ TV Shows</th>
-            <th>Comments</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Favourite Movies/ TV Shows</th>
+                <th>Comments</th>
             </tr>
             @{ foreach (XMLProjectIS.Movie movie in movies)
                 {
@@ -33,9 +35,8 @@
                         <td>@movie.MoviesTVs</td>
                         <td>@movie.Comments</td>
                     </tr>
-                } 
-             }
+                }
+            }
         </table>
     </div>
-
 </body>
