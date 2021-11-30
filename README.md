@@ -1,8 +1,9 @@
-**MOVIE RECOMMENDATION**
+ **MOVIE RECOMMENDATION**
 
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/90084383/140229869-7ca45c4f-bcdb-4a42-b3d1-1f158f25d1ab.png)
 ________________________________________
 **Introduction**
+
 BingWatch.com lets you discover Top 250 Movies and TV Shows alongwith Top 15 Breweries and Top 15 Property listings in Chicago.
 
 •	Search movie by Title
