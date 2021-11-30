@@ -2,6 +2,7 @@
 @model XMLProjectIS.Pages.DetailsModel
 @{
     MovieDetails.Item movies = (MovieDetails.Item)ViewData["SelectedMovieDetails"];
+    TV.Item tvdetails = (TV.Item)ViewData["SelectedTVDetails"];
 
 }
 
@@ -14,6 +15,18 @@
         <h3>Name: @movies.FullTitle</h3>
         <h4>Cast: @movies.Crew</h4>
         <img src="@movies.Image" />
+
+    </div>
+}
+
+@if (tvdetails != null)
+
+{
+   <h1>Selected TV Details</h1>
+    <div class="text-center">
+        <h3>Name: @tvdetails.Title</h3>
+        <h4>Cast: @tvdetails.Crew</h4>
+        <img src="@tvdetails.Image" />
 
     </div>
 }

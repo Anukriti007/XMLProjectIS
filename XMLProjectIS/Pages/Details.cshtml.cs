@@ -33,6 +33,22 @@ namespace XMLProjectIS.Pages
 
             ViewData["SelectedMovieDetails"] = selectedMovie[0];
 
+            string selectedTVID = Request.Query["id"];
+            TV.Item[] selectedTV = new TV.Item[1];
+
+            foreach (TV.Item TV in TVDetailsData)
+            {
+
+                string currentTVID = TV.Id;
+                if (currentTVID.Equals(selectedTVID))
+                {
+                    selectedTV[0] = TV;
+                }
+            }
+            //Console.WriteLine("plcc", pColl);
+
+            ViewData["SelectedTVDetails"] = selectedTV[0];
+
         }
     }
 }

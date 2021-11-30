@@ -1,0 +1,41 @@
+﻿@page
+@model BreweryArcsPage.Pages.BreweryArcsModel
+@{
+    var breweryarcs = (BreweryArcData.BreweryArcs[])ViewData["BreweryArcs"];
+}
+<h1>Top 25 Brewery Data</h1>
+<hr />
+<div class="text-center">
+    <table class="table table-striped table-light">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>City</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                int FirstFifteenBrewery = 0;
+                foreach (BreweryArcData.BreweryArcs breweryarc in breweryarcs)
+                {
+                    FirstFifteenBrewery = FirstFifteenBrewery + 1;
+                        <tr>
+                          
+                            <td>@breweryarc.Name</td>
+                            <td>@breweryarc.BreweryType</td>
+                            <td>@breweryarc.City</td>
+                            <td>@breweryarc.Phone</td>
+                        </tr>
+
+                    if (FirstFifteenBrewery == 15)
+                    { break; }
+
+
+                }
+            }
+        </tbody>
+    </table>
+</div>
