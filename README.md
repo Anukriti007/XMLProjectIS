@@ -3,68 +3,104 @@
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/90084383/140229869-7ca45c4f-bcdb-4a42-b3d1-1f158f25d1ab.png)
 ________________________________________
 **Introduction**
-Discover all the movie recommendations you need for your mood. Find movies by genres, ratings and cast. BingWatch.com provides you with list of movie recommendations as per your needs.
+BingWatch.com lets you discover Top 250 Movies and TV Shows alongwith Top 15 Breweries and Top 15 Property listings in Chicago.
 
-•	Search movie by popularity/ audience ratings
+•	Search movie by Title
 
-•	Search movie by genre
+•	Search TV Show by Title
 
-•	Search movie by cast and crew
+•	Details regarding Movie poster, Movie Title, Release year, IMDB Ratings, IMDB Count will be displayed.
 
-•	Details regarding Movie Title, Release date, Production Country, Original language, Revenue generated, Runtime and Ratings will be populated
+•	Display list of Top 15 Breweries
+
+•	Display list of Top 15 Property listings in Chicago.
 
 ________________________________________
 
 **Data Feeds**
 
-Dataset of 50,000 movies: [Movie Repository](https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json)
+Dataset of 250 movies: https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250Movies.json
 
-Dataset of Movies with their details and ratings: [Movie ratings](https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(2).json)
+Dataset of 250 TV Shows: https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250TVShows.json
 
-Dataset of Movies with their cast & crew: [Movie cast & crew](https://github.com/Anukriti007/XMLProjectIS/blob/master/csvjson(1).json)
+Dataset if Chicago Property listings: https://realestate20211125150037.azurewebsites.net/HousingRaw
 
-
+Dataset of Breweries: https://breweryarc.azurewebsites.net/breweryentire
 ________________________________________
 **Functional Requirements**
-Search a movie by popularity, genre, cast and crew.
+List movie cards of IMDB's Top 250 Movies.
 
-**_Scenario_**: A person wants to search a movie by different parameters. 
+**_Scenario_**: A person can view top 250 movies in a form of a card with its poster, Title and IMDB Rating.
 
-**_Dependencies_**: Movie recommendation data are available and accessible.
+**_Dependencies_**: IMDB Movie Dataset is available and accessible.
 
-**_Assumptions_**: Ratings are out of 5.0
+**_Assumptions_**: Ratings are out of 10.0
 
+
+**_Scenario_**: A person can view top 250 TV Shows in a form of a card with its poster, Title and IMDB Rating.
+
+**_Dependencies_**: IMDB TV Show Dataset is available and accessible.
+
+**_Assumptions_**: Ratings are out of 10.0
+
+
+**_Scenario_**: A person can search title from top 250 movies and TV shows.
+
+**_Dependencies_**: IMDB Movie and TV Show Dataset is available and accessible.
+
+**_Assumptions_**: Ratings are out of 10.0
 
 
 **Example 1.1**
-Given: Data of Movie recommendations is available
+Given: Data of Top 250 Movies and TV Shows is available
 
-When Search for "Comedy"
+When Search for "Fight Club"
 
-Then Should receive at least one result with these attributes
-1.	Movie Title
-2.	Release Date
-3.	Production Country
-4.	Original Language
-5.	Runtime
-6.	Cast & Crew
-7.	Revenue generated
-8.	Ratings
+Then Should receive one result tile with these attributes
+1.	Fight Club
+2.	Poster image
+3.	IMDB Rating: 8.8
+
+When clicked on Title, more details are displayed: 
+1. Name: Fight Club (1999)
+2. Movie Poster
+3. Rank: 11
+4. Cast: David Fincher (dir.), Brad Pitt, Edward Norton
+5. IMDB Rating: 8.8
+6. IMDB Count: 1965370
+
 
 **Example 1.2**
-Given: Data of Movie recommendations is available
+Given: Data of Top 250 Movies and TV Shows is available
 
-When Search for "Jim Carrey"
+When Search for "Chernobyl"
 
-Then Should receive at least one result with these attributes
-1.	Movie Title
-2.	Release Date
-3.	Production Country
-4.	Original Language
-5.	Runtime
-6.	Cast & Crew
-7.	Revenue generated
-8.	Ratings
+Then Should receive one result tile with these attributes
+1.	Chernobyl
+2.	Poster image 
+3.	IMDB Rating : 9.3
+
+When clicked on Title, more details are displayed: 
+1. Name: Chernobyl (2019)
+2. Movie Poster
+3. Rank: 5
+4. Cast :Jessie Buckley, Jared Harris
+5. IMDB Rating: 9.3
+6. IMDB Count: 629209
+
+
+**_Scenario_**: A person can view Top 15 Property listings in Chicago by clicking on Advertised image or navigation bar.
+
+**_Dependencies_**: Chicago Property listing Dataset is available and accessible.
+
+**_Assumptions_**: Listed properties are in Chicago.
+
+
+**_Scenario_**: A person can view Top 15 Breweries by clicking on Advertised image or navigation bar.
+
+**_Dependencies_**: Breweries Dataset is available and accessible.
+
+**_Assumptions_**: Listed breweries are fully operational.
 
 ________________________________________
 **SCRUM Roles**
