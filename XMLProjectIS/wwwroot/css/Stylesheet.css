@@ -73,8 +73,7 @@
 
 
 .carousel-1 {
-    height: 200px;
-    width: auto;
+    height: 50%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -88,4 +87,16 @@
     color: orangered !important;
 }
 
+.carousel-image {
+    width: 75% !important;
+    margin: 0 auto;
+}
+
+.nav-sticky-top {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
 
