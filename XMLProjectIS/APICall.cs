@@ -34,7 +34,7 @@ namespace XMLProjectIS
 
         public MovieDetails.Item[] GetMovieDetails()
         {
-            string moviesURL = "https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250Movies.json";
+            string moviesURL = "https://imdb-api.com/en/API/Top250Movies/k_7hid6bat";
             var movieDetailsStr = CallApiFunction(moviesURL);
             //parse the json string 
             MovieDetails.Item[] result = MovieDetails.Movies.FromJson(movieDetailsStr).Items;
@@ -44,7 +44,7 @@ namespace XMLProjectIS
 
         public TV.Item[] GetTVDetails()
         {
-            string TVURL = "https://raw.githubusercontent.com/Anukriti007/XMLProjectIS/master/Top250TVShows.json";
+            string TVURL = "https://imdb-api.com/en/API/Top250TVs/k_7hid6bat";
             var TVDetailStr = CallApiFunction(TVURL);
             //parse the json string 
             TV.Item[] result = TV.TVDetails.FromJson(TVDetailStr).Items;

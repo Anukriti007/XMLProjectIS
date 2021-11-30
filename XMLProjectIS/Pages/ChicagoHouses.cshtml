@@ -4,17 +4,13 @@
     var chicagohouses = (ChicagoHousesData.ChicagoHouses[])ViewData["ChicagoHouses"];
 }
 <head>
-    @*<link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />*@
+    <link rel="stylesheet" href="/css/StyleSheet.css" type="text/css" />
     <style>
     .bg-img1 {
     background-image: url("https://wallpaperaccess.com/full/306430.jpg");
     background-color: #cccccc;
-    @*background-position: center;
-    *@ background-repeat: no-repeat;
-    @*background-size: cover;
-    *@ @*position: relative;
-    background-size: cover;
-    *@ position: fixed;
+    background-repeat: no-repeat;
+    position: fixed;
     width: 100%;
     height: 100%;
 
@@ -32,13 +28,9 @@
     </style>
 </head>
 
-<body style="margin-top:0px">
-    @*<div class="bg-img1 container-fluid">
-        <h1>test 2</h1>
-    </div>*@
-
+<body style="font-family: Bahnschrift">
     <div class="container-fluid pt-3 content">
-        <h2 class="text-center white" >Looking for an ideal home in Chicago?</h2>
+        <h2 class="text-center white" ><strong>Looking for an ideal home in Chicago?</strong></h2>
     </div> 
            <div class="container">
                <div class="row">
@@ -75,36 +67,4 @@
                    </div>
                </div>
            </div>
-            @*<table class="table">
-                <thead>
-                    <tr>
-                        <th>Sr. no.</th>
-                        <th>Postal Address</th>
-                        <th>Unit Area (in sqfts)</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @{
-                        int FirstFifteenHouses = 0;
-                        foreach (ChicagoHousesData.ChicagoHouses chicagohouse in chicagohouses)
-                        {
-                            FirstFifteenHouses = FirstFifteenHouses + 1;
-                            <tr>
-                                <td>@FirstFifteenHouses</td>
-                                <td>@chicagohouse.Address</td>
-                                <td>@chicagohouse.Units</td>
-                            </tr>
-
-                            if (FirstFifteenHouses == 15)
-                            { break; }
-
-
-                        }
-                    }
-                </tbody>
-            </table>*@
-        
-    
-
 </body>
