@@ -12,12 +12,8 @@
         .bg-img {
             background-image: url("https://pickamovieforme.b-cdn.net/wp-content/uploads/2020/06/bg.jpg");
             background-color: #cccccc;
-            @*background-position: center;
-            *@ background-repeat: no-repeat;
-            @*background-size: cover;
-            *@ @*position: relative;
-            background-size: cover;
-            *@ position: fixed;
+            background-repeat: no-repeat;
+            position: fixed;
             width: 100%;
             height: 100%;
         }
@@ -28,7 +24,6 @@
         }
 
         .welcome {
-            
             font-size: xx-large;
             text-align: center;
             margin-top: 20px;
@@ -39,6 +34,7 @@
             margin: auto;
             width: 50%;
         }
+
         .input {
             width: 50% !important;
             float: right;
@@ -69,7 +65,6 @@
                 <div class="col-8 pt-1">
                     <input asp-for="MovieIdentifier" class=" form-control input pt-1" placeholder="Search a Movie or a TV Show" />
                 </div>
-                @*<input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie or a TV Show" />*@
                 <div class="col-4">
                     <button type="submit" class="btn btn-primary">Search</button>
                 </div>
@@ -77,23 +72,17 @@
 
         </div>
 
-        @*<div class="d-flex justify-content-center bg-secondary mb-3">
-            <div class="p-2 bg-info">Flex item 1</div>
-            <div class="p-2 bg-warning">Flex item 2</div>
-            <div class="p-2 bg-primary">Flex item 3</div>
-        </div>*@
-
         <div class="col-sm-12">
             <br />
             <p class="text-center" style="font-family:Bahnschrift">
                 How long do you spend looking for something to watch ?<br />
                 If you are still looking for an answer, we got you covered.<br />
-                BingeWatch.com lets you find the top 250 movies or TV Shows with IMDB Reviews and ratings.
+                BingeWatch.com lets you find the latest top 250 movies or TV Shows with IMDB Reviews and ratings.
             </p>
         </div>
 
         <div class="col-12">
-            <div id="carouselExampleIndicators" class="carousel slide" interval="1000" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" interval="700" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -143,11 +132,11 @@
         </div>
 
         <div class="col-12 text-center image">
-            
-                <h3 style="font-family:Bahnschrift"><strong>We would like to hear from you!</strong></h3>
-                <p style="font-size:medium">Contact us: team@bingewatch.com</p>
-                <img src="/img/WhatsApp Image 2021-11-30 at 16.38.42.jpeg" alt="Team photo" height="300px" />
-            
+
+            <h3 style="font-family:Bahnschrift"><strong>We would like to hear from you!</strong></h3>
+            <p style="font-size:medium">Contact us: team@bingewatch.com</p>
+            <img src="/img/WhatsApp Image 2021-11-30 at 16.38.42.jpeg" alt="Team photo" height="300px" />
+
         </div>
 
 
@@ -166,139 +155,3 @@
 
 
 
-@*<style>
-        .searchTxt {
-            width: 100%;
-        }
-
-        .movieCard {
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-            height: 360px;
-            margin: 20px;
-            border: 1px solid black;
-            box-shadow: 2px 2px 8px 0px #000000;
-            -webkit-box-shadow: 2px 2px 8px 0px #000000;
-        }
-
-        .movieContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .movieTitle{
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .movieImg{
-            width: 100%;
-        }
-
-        .movieTitle {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .searchTxt {
-            width: 100%;
-        }
-
-        .TvCard {
-            display: flex;
-            flex-direction: column;
-            width: 200px;
-            height: 360px;
-            margin: 20px;
-            border: 1px solid black;
-            box-shadow: 2px 2px 8px 0px #000000;
-            -webkit-box-shadow: 2px 2px 8px 0px #000000;
-        }
-
-        .TVContainer{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .TVTitle {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .display-4 {
-            width: 100%;
-        }
-    </style>
-
-    <div class="text-center">
-        <h1 class="display-4">Movies</h1>
-    </div>
-
-    <input id="Text1" type="text" class="searchTxt" />
-
-    <hr />*@
-
-@*<div class="movieContainer">
-        @foreach (MovieDetails.Item movie in movies)
-        {
-            <div class="movieCard">
-                <div>
-                    <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
-                </div>
-                <div class="movieTitle">
-                    <label>@movie.Title</label>
-                    <label>@movie.Year</label>
-                </div>
-                <div class="movieTitle">
-                    <label>IMDB Rating:-</label>
-                    <label>@movie.ImDbRating</label>
-                </div>
-            </div>
-        }
-    </div>*@
-
-
-@*<div class="TVContainer">
-        @foreach (TV.Item TVs in tvdetails)
-        {
-            <div class="TvCard">
-                <div>
-                    <img src="@TVs.Image" class="movieImg" alt="Img Not Found" />
-                </div>
-                <div class="TVTitle">
-                    <label>@TVs.Title</label>
-                    <label>@TVs.Year</label>
-                </div>
-                <div class="TvTitle">
-                    <label>IMDB Rating:-</label>
-                    <label>@TVs.ImDbRating</label>
-                </div>
-            </div>
-        }
-    </div>*@
-
-@*<table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Year</th>
-                <th>IMDB Rating</th>
-                <th>Ranking</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (MovieDetails.Item movie in movies)
-            {
-                <tr>
-                    <td>@movie.Title</td>
-                    <td>@movie.Year</td>
-                    <td>@movie.ImDbRating</td>
-                    <td>@movie.Rank</td>
-                </tr>
-            }
-
-        </tbody>
-    </table>*@
