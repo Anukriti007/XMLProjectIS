@@ -3,76 +3,79 @@
 @{
     MovieDetails.Item[] movies = (MovieDetails.Item[])ViewData["MovieDetails"];
     TV.Item[] tvdetails = (TV.Item[])ViewData["TVDetails"];
-
 }
 
-
-<body style="margin-top:0px; font-family: Bahnschrift">
-
-    @if (movies[0] != null)
-    {
-
-        <div class="movieContainer">
-            <h3>Movies Result</h3>
-
-            @foreach (MovieDetails.Item movie in movies)
-            {
-                <div class="movieCard">
-                    <div>
-                        <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
-                    </div>
-                    <div class="movieTitle">
-                        <a asp-page="./Details" asp-route-id="@movie.Id">
-                            <label>
-                                @movie.Title
-                            </label>
-                        </a>
-                        <label>@movie.Year</label>
-                    </div>
-                    <div class="movieTitle">
-                        <label>IMDB Rating:-</label>
-                        <label>@movie.ImDbRating</label>
-                    </div>
-                </div>
-            }
+ 
+<body style="margin-top: 0px; font-family:Bahnschrift">
+        <div class="col-sm-4 search">
+            <form action="/ItemData" method="get" class="form-inline col-sm-12">
+                <input asp-for="MovieIdentifier" class=" form-control mr-sm-2 col-sm-6" placeholder="Search a Movie" />
+                <button type="submit" class="btn btn-primary col-sm-4">Search</button>
+            </form>
         </div>
-    }
 
+        @if (movies[0] != null)
+        {
 
-    @if (tvdetails[0] != null)
-    {
+            <div class="movieContainer">
+                <h3>Movies Result</h3>
 
-        <div class="TVContainer">
-            <h3>TV Result</h3>
-            @foreach (TV.Item TVs in tvdetails)
-            {
-                <div class="TvCard">
-                    <div>
-                        <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
+                @foreach (MovieDetails.Item movie in movies)
+                {
+                    <div class="movieCard">
+                        <div>
+                            <img src="@movie.Image" class="movieImg" alt="Img Not Found" />
+                        </div>
+                        <div class="movieTitle">
+                            <a asp-page="./ItemData" asp-route-id="@movie.Title">
+                                <label>
+                                    @movie.Title
+                                </label>
+                            </a>
+                            <label>@movie.Year</label>
+                        </div>
+                        <div class="movieTitle">
+                            <label>IMDB Rating:-</label>
+                            <label>@movie.ImDbRating</label>
+                        </div>
                     </div>
-                    <div class="TVTitle">
-                        <a asp-page="./Details" asp-route-id="@TVs.Id">
+                }
+            </div>
+        }
+
+
+        else if (tvdetails != null)
+        {
+
+
+            <div class="TVContainer">
+                <h3>TV Result</h3>
+                @foreach (TV.Item TVs in tvdetails)
+                {
+                    <div class="TvCard">
+                        <div>
+                            <img src="@TVs.Image" class="TVImg" alt="Img Not Found" />
+                        </div>
+                        <div class="TVTitle">
                             <label>@TVs.Title</label>
-                        </a>
-                        <label>@TVs.Year</label>
+                            <label>@TVs.Year</label>
+                        </div>
+                        <div class="TvTitle">
+                            <label>IMDB Rating:-</label>
+                            <label>@TVs.ImDbRating</label>
+                        </div>
                     </div>
-                    <div class="TvTitle">
-                        <label>IMDB Rating:-</label>
-                        <label>@TVs.ImDbRating</label>
-                    </div>
-                </div>
-            }
-        </div>
-    }
+                }
+            </div>
+        }
 
 
 
+        @if (movies[0] == null && tvdetails[0] == null)
+        {
+            <div class="text-left">
+                Sorry!! You didnt enter a title or your search result not found in Top 250 Movies and TV Shows.
+            </div>
+        }
 
-    @if (movies[0] == null && tvdetails[0] == null)
-    {
-        <div class="text-left">
-            Sorry!! Your search result not found in Top 250 Movies and TV Shows.
-        </div>
-    }
-
-</body>
+    </body>
